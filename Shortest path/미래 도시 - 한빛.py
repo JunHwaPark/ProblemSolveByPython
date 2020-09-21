@@ -20,7 +20,7 @@ dist_from_1[1] = 0
 def dijkstra(dist_from):
     while q:
         dist, now = heapq.heappop(q)
-        if dist_from[now] > dist:
+        if dist_from[now] < dist:
             continue
         for i in route[now]:
             if dist_from[i] > dist + 1:
