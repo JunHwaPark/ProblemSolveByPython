@@ -1,10 +1,9 @@
-from copy import deepcopy
 from itertools import permutations
 
 length = 0
 
 
-def fix(weak, dist, point):
+def fix(weak, dist):
     index = 0
     size = len(weak)
 
@@ -25,7 +24,7 @@ def check(weak, dist):
     size = len(weak)
     for i in range(size):
         tmp = [weak[a] + length for a in range(i)]
-        if fix(weak[i:] + tmp, dist, i):
+        if fix(weak[i:] + tmp, dist):
             return True
     return False
 
