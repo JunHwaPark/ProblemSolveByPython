@@ -1,5 +1,4 @@
 from itertools import combinations
-from copy import deepcopy
 
 n, m = map(int, input().split())
 # for comb in combinations(range(1, n + 1), m):
